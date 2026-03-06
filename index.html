@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Sogna | Marketing & Estratégia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #121212;
+            --accent: #c5a059;
+            --gray-light: #f8f9fa;
+            --text-main: #333;
+            --text-muted: #666;
+        }
+
+        body { font-family: 'Inter', sans-serif; margin: 0; color: var(--text-main); line-height: 1.6; background: #fff; }
+
+        header {
+            padding: 100px 20px 60px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--gray-light), #fff);
+        }
+
+        .group-logo {
+            max-width: 220px;
+            margin-bottom: 25px;
+            /* Se você subir o logo do Grupo Sogna, troque o nome abaixo */
+        }
+
+        h1 { font-size: 2.8rem; font-weight: 700; margin: 0; letter-spacing: -1.5px; }
+        .tagline { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-top: 10px; }
+
+        .about-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+            text-align: center;
+        }
+
+        .about-text { font-size: 1.2rem; color: var(--text-muted); font-weight: 300; }
+
+        .brands-container {
+            background-color: var(--gray-light);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #999;
+            margin-bottom: 50px;
+            display: block;
+        }
+
+        .brands-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .brand-link {
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .brand-link:hover { transform: translateY(-10px); }
+
+        .brand-logo {
+            max-width: 140px;
+            height: auto;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: 0.4s;
+        }
+
+        .brand-link:hover .brand-logo {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .brand-name {
+            margin-top: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .brands-grid { gap: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://via.placeholder.com/250x100?text=GRUPO+SOGNA" alt="Grupo Sogna" class="group-logo">
+        <h1>Gestão & Estratégia</h1>
+        <div class="tagline">Gastronomia & Lifestyle de Alta Performance</div>
+    </header>
+
+    <section class="about-section">
+        <p class="about-text">
+            O <strong>Grupo Sogna</strong> coordena um ecossistema de marcas líderes, focadas em elevar a experiência gastronômica e o estilo de vida outdoor. Unimos tecnologia, design e curadoria para entregar soluções que transformam o cotidiano.
+        </p>
+    </section>
+
+    <section class="brands-container">
+        <span class="section-label">Nosso Portfólio</span>
+        <div class="brands-grid">
+            
+            <a href="https://sogna.com.br" target="_blank" class="brand-link">
+                <img src="https://via.placeholder.com/150x80?text=SOGNA" alt="Sogna" class="brand-logo">
+                <span class="brand-name">Conceito & Design</span>
+            </a>
+
+            <a href="https://revolucaodapizza.com.br" target="_blank" class="brand-link">
+                <img src="https://via.placeholder.com/150x80?text=REVOLUCAO" alt="Revolução da Pizza" class="brand-logo">
+                <span class="brand-name">Educação Gastronômica</span>
+            </a>
+
+            <a href="https://coyoteoutdoor.com.br" target="_blank" class="brand-link">
+                <img src="https://via.placeholder.com/150x80?text=COYOTE" alt="Coyote Outdoor" class="brand-logo">
+                <span class="brand-name">Outdoor Experience</span>
+            </a>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Grupo Sogna. Todos os direitos reservados.<br>
+        São Paulo, Brasil.</p>
+    </footer>
+
+</body>
+</html>
