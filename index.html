@@ -3,155 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Sogna | Gestão & Estratégia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Grupo Sogna | Gestão, Marketing & Distribuição</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            /* Paleta Dark Premium */
-            --bg-dark: #1a1a1a;        /* Cinza Escuro Principal */
-            --bg-accent: #242424;      /* Cinza levemente mais claro para seções */
-            --primary-gold: #c5a059;   /* Dourado para destaques */
-            --text-white: #ffffff;
-            --text-dim: #a0a0a0;       /* Cinza para textos secundários */
+            --bg-color: #0a0a0a; /* Preto quase absoluto */
+            --gold-accent: #c5a059; /* Dourado Sogna */
+            --text-main: #fcfcfc;
+            --text-secondary: #a3a3a3;
+            --divider: rgba(197, 160, 89, 0.2);
         }
 
         body { 
-            font-family: 'Inter', sans-serif; 
+            font-family: 'Montserrat', sans-serif; 
             margin: 0; 
-            color: var(--text-white); 
-            line-height: 1.6; 
-            background: var(--bg-dark); 
+            background-color: var(--bg-color); 
+            color: var(--text-main);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
         }
 
+        h1, h2, h3 { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 500; 
+            margin: 0; 
+        }
+
+        /* Cabecalho Imponente */
         header {
-            padding: 100px 20px 60px;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            background: var(--bg-dark);
+            padding: 40px 20px;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+            border-bottom: 1px solid var(--divider);
         }
 
         .group-logo { 
-            max-width: 280px; 
+            max-width: 320px; /* Logo maior e mais imponente */
             height: auto;
-            margin-bottom: 30px;
-            /* Se o logo tiver fundo escuro, ele vai mesclar perfeitamente */
+            margin-bottom: 40px;
         }
 
-        h1 { font-size: 2.2rem; font-weight: 700; margin: 0; letter-spacing: -1px; color: var(--text-white); }
-        .tagline { color: var(--primary-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 4px; font-size: 0.8rem; margin-top: 15px; }
+        h1 { 
+            font-size: 3rem; 
+            color: var(--gold-accent); 
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
 
+        .tagline { 
+            font-size: 0.85rem; 
+            text-transform: uppercase; 
+            letter-spacing: 6px; 
+            color: var(--text-secondary); 
+            font-weight: 400;
+        }
+
+        /* Sessão Sobre */
         .about-section {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px 80px;
+            padding: 100px 20px;
+            text-align: center;
         }
 
-        .about-text { font-size: 1.1rem; color: var(--text-dim); font-weight: 300; text-align: center; }
+        .about-text { 
+            font-size: 1.2rem; 
+            color: var(--text-secondary); 
+            font-weight: 300; 
+        }
         
-        .highlight-box { 
-            background: rgba(255, 255, 255, 0.03); 
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 25px; 
-            margin: 40px 0; 
+        .about-text strong {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .highlight-phrase {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold-accent);
             font-style: italic;
-            text-align: center;
-            color: var(--primary-gold);
-            font-size: 1.2rem;
+            margin: 50px 0;
+            line-height: 1.4;
         }
 
+        /* Portfólio de Marcas - Cores Originais */
         .brands-container {
-            background-color: var(--bg-accent);
-            padding: 80px 20px;
+            padding: 100px 20px;
             text-align: center;
+            background-color: #0f0f0f;
+            border-top: 1px solid var(--divider);
         }
 
-        .section-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            color: var(--text-dim);
-            margin-bottom: 60px;
-            display: block;
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--text-main);
+            margin-bottom: 80px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--gold-accent);
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .brands-grid {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 70px;
+            gap: 80px;
             flex-wrap: wrap;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .brand-link {
             text-decoration: none;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 180px;
+            padding: 20px;
+            border-radius: 8px;
+            transition: all 0.4s ease;
         }
 
         .brand-logo {
-            max-width: 150px;
-            max-height: 70px;
+            max-width: 180px;
+            max-height: 90px;
             width: auto;
             height: auto;
-            filter: brightness(0) invert(1); /* Deixa os logos brancos para o fundo escuro */
-            opacity: 0.4;
-            transition: 0.4s;
             object-fit: contain;
+            transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+            /* Sem filtro! As cores originais vão aparecer */
+        }
+
+        .brand-link:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transform: translateY(-5px);
         }
 
         .brand-link:hover .brand-logo {
-            filter: none; /* Volta a cor original no hover */
-            opacity: 1;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
-        .brand-name {
-            margin-top: 20px;
-            font-size: 0.65rem;
-            font-weight: 700;
-            color: var(--text-dim);
+        .brand-category {
+            margin-top: 25px;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
             text-transform: uppercase;
-            letter-spacing: 2px;
-            opacity: 0.5;
+            letter-spacing: 3px;
         }
 
+        /* Rodapé */
         footer {
-            padding: 80px 20px;
+            padding: 80px 20px 60px;
             text-align: center;
-            background: var(--bg-dark);
-            font-size: 0.8rem;
-            color: var(--text-dim);
+            background-color: var(--bg-color);
         }
 
-        .social-link {
+        .linkedin-btn {
             display: inline-block;
-            margin-bottom: 30px;
-            color: var(--text-white);
+            margin-bottom: 40px;
+            color: var(--bg-color);
+            background-color: var(--gold-accent);
             text-decoration: none;
             font-weight: 600;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 12px 25px;
-            border-radius: 2px;
-            transition: 0.3s;
-            letter-spacing: 1px;
+            padding: 15px 35px;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            font-size: 0.75rem;
+            letter-spacing: 2px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
         }
 
-        .social-link:hover { 
-            background: var(--text-white); 
-            color: var(--bg-dark); 
-            border-color: var(--text-white); 
+        .linkedin-btn:hover {
+            background-color: #d8b46a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.2);
+        }
+
+        .footer-text {
+            font-size: 0.8rem;
+            color: #555;
+            letter-spacing: 1px;
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
+            h1 { font-size: 2.2rem; }
             .brands-grid { gap: 40px; }
+            .highlight-phrase { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -160,47 +215,46 @@
     <header>
         <img src="Layer_1-1.png" alt="Grupo Sogna" class="group-logo">
         <h1>Conectando Marcas ao Brasil</h1>
-        <div class="tagline">Marketing, Distribuição & Pós-Venda</div>
+        <div class="tagline">Importação, Marketing & Distribuição</div>
     </header>
 
     <section class="about-section">
         <div class="about-text">
             <p>Antes conhecidos como Grupo WE, construímos uma sólida reputação ao conectar marcas internacionais ao mercado brasileiro. Com expertise em importação e marketing, ajudamos grandes nomes a crescerem no país — entre eles, <strong>Ooni</strong> e <strong>Coyote Outdoor Living</strong>.</p>
             
-            <div class="highlight-box">
-                Agora, damos um passo além: nos tornamos <strong>Grupo SOGNA</strong>.
+            <div class="highlight-phrase">
+                "Agora, damos um passo além:<br>nos tornamos Grupo SOGNA."
             </div>
 
-            <p>Um movimento que une robustez empresarial, sutileza estratégica e visão de futuro, consolidando nossa relevância no setor de gastronomia e lifestyle.</p>
+            <p>A transição representa a consolidação de uma trajetória de sucesso. Um movimento que une robustez empresarial, sutileza estratégica e visão de futuro, fortalecendo nosso protagonismo no setor de gastronomia e lifestyle.</p>
         </div>
     </section>
 
     <section class="brands-container">
-        <span class="section-label">Ecossistema de Marcas</span>
+        <h2 class="section-title">Portfólio de Atuação</h2>
         <div class="brands-grid">
             
             <a href="https://sogna.com.br" target="_blank" class="brand-link">
                 <img src="SOGNA-WineVelvet.png" alt="Sogna" class="brand-logo">
-                <span class="brand-name">Conceito & Design</span>
+                <span class="brand-category">Conceito & Design</span>
             </a>
 
             <a href="https://revolucaodapizza.com.br" target="_blank" class="brand-link">
-                <img src="Ooni Pizza Ovens-Logo-2021-White.png" alt="Ooni" class="brand-logo">
-                <span class="brand-name">Fornos número 1 em pizza</span>
+                <img src="Ooni Pizza Ovens-Logo-2021-White.png" alt="Revolução da Pizza" class="brand-logo">
+                <span class="brand-category">Distribuidor exclusivo</span>
             </a>
 
             <a href="https://coyoteoutdoor.com.br" target="_blank" class="brand-link">
                 <img src="Coyote_Logo (1).png" alt="Coyote Outdoor" class="brand-logo">
-                <span class="brand-name">Outdoor Experience</span>
+                <span class="brand-category">Outdoor Experience</span>
             </a>
 
         </div>
     </section>
 
     <footer>
-        <a href="https://www.linkedin.com/company/grupo-sogna/" target="_blank" class="social-link">LinkedIn</a>
-        <p>&copy; 2026 Grupo Sogna. Todos os direitos reservados.<br>
-        São Paulo | Brasil</p>
+        <a href="https://www.linkedin.com/company/grupo-sogna/" target="_blank" class="linkedin-btn">Siga no LinkedIn</a>
+        <p class="footer-text">&copy; 2026 Grupo Sogna. Todos os direitos reservados.<br>São Paulo | Brasil</p>
     </footer>
 
 </body>
