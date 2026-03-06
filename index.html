@@ -16,49 +16,53 @@
 
         body { font-family: 'Inter', sans-serif; margin: 0; color: var(--text-main); line-height: 1.6; background: #fff; }
 
-        /* Header */
         header {
-            padding: 100px 20px 40px;
+            padding: 80px 20px 40px;
             text-align: center;
             background: linear-gradient(to bottom, var(--gray-light), #fff);
         }
 
-        .group-logo { max-width: 240px; margin-bottom: 20px; }
-
-        h1 { font-size: 2.5rem; font-weight: 700; margin: 0; letter-spacing: -1.5px; color: var(--primary); }
-        .tagline { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; margin-top: 10px; }
-
-        /* Seção Sobre Adaptada */
-        .about-section {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 20px 20px 80px;
-            text-align: center;
+        /* Ajuste do Logo Principal */
+        .group-logo { 
+            max-width: 280px; 
+            height: auto;
+            margin-bottom: 20px; 
         }
 
-        .about-text { font-size: 1.15rem; color: var(--text-muted); font-weight: 300; text-align: justify; }
+        h1 { font-size: 2.2rem; font-weight: 700; margin: 0; letter-spacing: -1px; color: var(--primary); }
+        .tagline { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin-top: 10px; }
+
+        .about-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 20px 60px;
+        }
+
+        .about-text { font-size: 1.1rem; color: var(--text-muted); font-weight: 300; text-align: center; }
+        
         .highlight-box { 
             background: #fff; 
-            border-left: 3px solid var(--accent); 
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
             padding: 20px; 
             margin: 30px 0; 
             font-style: italic;
             text-align: center;
+            color: var(--primary);
         }
 
-        /* Grid de Marcas */
         .brands-container {
             background-color: var(--gray-light);
-            padding: 80px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
 
         .section-label {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 4px;
             color: #999;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             display: block;
         }
 
@@ -66,29 +70,31 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 50px;
+            gap: 60px;
             flex-wrap: wrap;
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .brand-link {
             text-decoration: none;
-            transition: transform 0.3s ease;
+            transition: 0.3s;
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 180px;
+            width: 200px;
         }
 
-        .brand-link:hover { transform: translateY(-8px); }
-
+        /* Padronização das marcas */
         .brand-logo {
-            max-width: 140px;
+            max-width: 160px;
+            max-height: 80px; /* Garante que logos horizontais e verticais convivam bem */
+            width: auto;
             height: auto;
             filter: grayscale(100%);
-            opacity: 0.5;
+            opacity: 0.6;
             transition: 0.4s;
+            object-fit: contain;
         }
 
         .brand-link:hover .brand-logo {
@@ -98,30 +104,29 @@
 
         .brand-name {
             margin-top: 15px;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 700;
-            color: #999;
+            color: #bbb;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        /* Rodapé e Social */
         footer {
-            padding: 60px 20px;
+            padding: 50px 20px;
             text-align: center;
             background: #fff;
-            font-size: 0.85rem;
-            color: #999;
+            font-size: 0.8rem;
+            color: #aaa;
         }
 
         .social-link {
             display: inline-block;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             color: var(--primary);
             text-decoration: none;
             font-weight: 600;
-            border: 1px solid #ddd;
-            padding: 10px 20px;
+            border: 1px solid #eee;
+            padding: 8px 18px;
             border-radius: 4px;
             transition: 0.3s;
         }
@@ -130,27 +135,27 @@
 
         @media (max-width: 768px) {
             h1 { font-size: 1.8rem; }
-            .about-text { text-align: left; }
+            .brands-grid { gap: 30px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="https://via.placeholder.com/280x100?text=GRUPO+SOGNA" alt="Grupo Sogna" class="group-logo">
+        <img src="SOGNA-WineVelvet.png" alt="Grupo Sogna" class="group-logo">
         <h1>Conectando Marcas ao Brasil</h1>
-        <div class="tagline">Expertise em Distribuição & Marketing</div>
+        <div class="tagline">Distribuição, Marketing & Pós-Venda</div>
     </header>
 
     <section class="about-section">
         <div class="about-text">
-            <p>Antes conhecidos como Grupo WE, construímos uma sólida reputação ao conectar marcas internacionais ao mercado brasileiro. Com expertise em importação, distribuição, marketing e pós-venda, ajudamos grandes nomes a crescerem no país — entre eles, <strong>Ooni</strong> e <strong>Coyote Outdoor Living</strong>.</p>
+            <p>Antes conhecidos como Grupo WE, construímos uma sólida reputação ao conectar marcas internacionais ao mercado brasileiro. Com expertise em importação e marketing, ajudamos grandes nomes a crescerem no país — entre eles, <strong>Ooni</strong> e <strong>Coyote Outdoor Living</strong>.</p>
             
             <div class="highlight-box">
                 Agora, damos um passo além: nos tornamos <strong>Grupo SOGNA</strong>.
             </div>
 
-            <p>A transição para Grupo SOGNA representa mais do que uma mudança de nome: é a consolidação de uma trajetória de sucesso. Um movimento que une robustez empresarial, sutileza estratégica e visão de futuro, fortalecendo nossa atuação e protagonismo no setor de gastronomia e lifestyle.</p>
+            <p>Um movimento que une robustez empresarial, sutileza estratégica e visão de futuro, consolidando nossa relevância no setor de gastronomia e lifestyle.</p>
         </div>
     </section>
 
@@ -159,18 +164,23 @@
         <div class="brands-grid">
             
             <a href="https://sogna.com.br" target="_blank" class="brand-link">
-                <img src="https://via.placeholder.com/150x80?text=SOGNA" alt="Sogna" class="brand-logo">
+                <img src="SOGNA-WineVelvet.png" alt="Sogna" class="brand-logo">
                 <span class="brand-name">Conceito & Design</span>
             </a>
 
             <a href="https://revolucaodapizza.com.br" target="_blank" class="brand-link">
-                <img src="https://via.placeholder.com/150x80?text=REVOLUCAO" alt="Revolução da Pizza" class="brand-logo">
+                <img src="Layer_1-1.png" alt="Revolução da Pizza" class="brand-logo">
                 <span class="brand-name">Educação Gastronômica</span>
             </a>
 
             <a href="https://coyoteoutdoor.com.br" target="_blank" class="brand-link">
-                <img src="https://via.placeholder.com/150x80?text=COYOTE" alt="Coyote Outdoor" class="brand-logo">
-                <span class="brand-name">Outdoor Living</span>
+                <img src="Coyote_Logo (1).png" alt="Coyote Outdoor" class="brand-logo">
+                <span class="brand-name">Outdoor Experience</span>
+            </a>
+
+            <a href="https://ooni.com.br" target="_blank" class="brand-link">
+                <img src="Ooni Pizza Ovens-Logo-2021-White.png" alt="Ooni Pizza Ovens" class="brand-logo">
+                <span class="brand-name">Pizzaria em Casa</span>
             </a>
 
         </div>
