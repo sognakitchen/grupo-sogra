@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Sogna | Marketing & Estratégia</title>
+    <title>Grupo Sogna | Gestão, Marketing & Distribuição</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -16,30 +16,37 @@
 
         body { font-family: 'Inter', sans-serif; margin: 0; color: var(--text-main); line-height: 1.6; background: #fff; }
 
+        /* Header */
         header {
-            padding: 100px 20px 60px;
+            padding: 100px 20px 40px;
             text-align: center;
             background: linear-gradient(to bottom, var(--gray-light), #fff);
         }
 
-        .group-logo {
-            max-width: 220px;
-            margin-bottom: 25px;
-            /* Se você subir o logo do Grupo Sogna, troque o nome abaixo */
-        }
+        .group-logo { max-width: 240px; margin-bottom: 20px; }
 
-        h1 { font-size: 2.8rem; font-weight: 700; margin: 0; letter-spacing: -1.5px; }
-        .tagline { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-top: 10px; }
+        h1 { font-size: 2.5rem; font-weight: 700; margin: 0; letter-spacing: -1.5px; color: var(--primary); }
+        .tagline { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; margin-top: 10px; }
 
+        /* Seção Sobre Adaptada */
         .about-section {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
-            padding: 40px 20px 80px;
+            padding: 20px 20px 80px;
             text-align: center;
         }
 
-        .about-text { font-size: 1.2rem; color: var(--text-muted); font-weight: 300; }
+        .about-text { font-size: 1.15rem; color: var(--text-muted); font-weight: 300; text-align: justify; }
+        .highlight-box { 
+            background: #fff; 
+            border-left: 3px solid var(--accent); 
+            padding: 20px; 
+            margin: 30px 0; 
+            font-style: italic;
+            text-align: center;
+        }
 
+        /* Grid de Marcas */
         .brands-container {
             background-color: var(--gray-light);
             padding: 80px 20px;
@@ -47,9 +54,9 @@
         }
 
         .section-label {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             color: #999;
             margin-bottom: 50px;
             display: block;
@@ -59,7 +66,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 60px;
+            gap: 50px;
             flex-wrap: wrap;
             max-width: 1100px;
             margin: 0 auto;
@@ -71,15 +78,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 180px;
         }
 
-        .brand-link:hover { transform: translateY(-10px); }
+        .brand-link:hover { transform: translateY(-8px); }
 
         .brand-logo {
             max-width: 140px;
             height: auto;
             filter: grayscale(100%);
-            opacity: 0.6;
+            opacity: 0.5;
             transition: 0.4s;
         }
 
@@ -90,43 +98,64 @@
 
         .brand-name {
             margin-top: 15px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #aaa;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #999;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
+        /* Rodapé e Social */
         footer {
             padding: 60px 20px;
             text-align: center;
-            border-top: 1px solid #eee;
+            background: #fff;
             font-size: 0.85rem;
             color: #999;
         }
 
+        .social-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .social-link:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .brands-grid { gap: 40px; }
+            h1 { font-size: 1.8rem; }
+            .about-text { text-align: left; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="https://via.placeholder.com/250x100?text=GRUPO+SOGNA" alt="Grupo Sogna" class="group-logo">
-        <h1>Gestão & Estratégia</h1>
-        <div class="tagline">Gastronomia & Lifestyle de Alta Performance</div>
+        <img src="https://via.placeholder.com/280x100?text=GRUPO+SOGNA" alt="Grupo Sogna" class="group-logo">
+        <h1>Conectando Marcas ao Brasil</h1>
+        <div class="tagline">Expertise em Distribuição & Marketing</div>
     </header>
 
     <section class="about-section">
-        <p class="about-text">
-            O <strong>Grupo Sogna</strong> coordena um ecossistema de marcas líderes, focadas em elevar a experiência gastronômica e o estilo de vida outdoor. Unimos tecnologia, design e curadoria para entregar soluções que transformam o cotidiano.
-        </p>
+        <div class="about-text">
+            <p>Antes conhecidos como Grupo WE, construímos uma sólida reputação ao conectar marcas internacionais ao mercado brasileiro. Com expertise em importação, distribuição, marketing e pós-venda, ajudamos grandes nomes a crescerem no país — entre eles, <strong>Ooni</strong> e <strong>Coyote Outdoor Living</strong>.</p>
+            
+            <div class="highlight-box">
+                Agora, damos um passo além: nos tornamos <strong>Grupo SOGNA</strong>.
+            </div>
+
+            <p>A transição para Grupo SOGNA representa mais do que uma mudança de nome: é a consolidação de uma trajetória de sucesso. Um movimento que une robustez empresarial, sutileza estratégica e visão de futuro, fortalecendo nossa atuação e protagonismo no setor de gastronomia e lifestyle.</p>
+        </div>
     </section>
 
     <section class="brands-container">
-        <span class="section-label">Nosso Portfólio</span>
+        <span class="section-label">Portfólio de Atuação</span>
         <div class="brands-grid">
             
             <a href="https://sogna.com.br" target="_blank" class="brand-link">
@@ -141,15 +170,16 @@
 
             <a href="https://coyoteoutdoor.com.br" target="_blank" class="brand-link">
                 <img src="https://via.placeholder.com/150x80?text=COYOTE" alt="Coyote Outdoor" class="brand-logo">
-                <span class="brand-name">Outdoor Experience</span>
+                <span class="brand-name">Outdoor Living</span>
             </a>
 
         </div>
     </section>
 
     <footer>
+        <a href="https://www.linkedin.com/company/grupo-sogna/" target="_blank" class="social-link">LinkedIn Institucional</a>
         <p>&copy; 2026 Grupo Sogna. Todos os direitos reservados.<br>
-        São Paulo, Brasil.</p>
+        São Paulo | Brasil</p>
     </footer>
 
 </body>
