@@ -166,20 +166,27 @@
             font-weight: 400;
         }
 
-        /* Novo Estilo: Texto na base do banner */
+        /* Novo Estilo: Texto na base do banner com caixa sombreada */
         .hero-mini-text {
             position: absolute;
-            bottom: 50px; /* Distância do final da foto */
+            bottom: 60px; /* Distância do final da foto */
             left: 50%;
             transform: translateX(-50%);
-            max-width: 600px;
+            max-width: 550px;
+            width: 90%;
+            
+            /* A mágica da caixinha sombreada acontece aqui: */
+            background-color: rgba(10, 10, 10, 0.85); /* Fundo preto quase sólido */
+            padding: 30px 40px; /* Espaço interno para o texto respirar */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra em volta da caixa */
+            border-left: 2px solid var(--gold-accent); /* Um toque sutil em dourado da Sogna */
+            
             font-size: 1.05rem;
-            color: var(--text-main); /* Texto branco. Se a foto for clara na base, mude para var(--bg-color) */
+            color: var(--text-main); 
             font-weight: 300;
             line-height: 1.6;
             letter-spacing: 0.5px;
-            text-align: center;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* Sombra sutil apenas no texto para garantir leitura */
+            text-align: left; /* Alinhado à esquerda igual à referência */
         }
 
         /* --- SOBRE A EMPRESA --- */
