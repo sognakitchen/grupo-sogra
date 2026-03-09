@@ -128,7 +128,7 @@
             color: var(--gold-accent);
         }
 
-        /* --- HERO BANNER COM IMAGEM --- */
+        /* --- HERO BANNER COM IMAGEM (Ajustado) --- */
         .hero {
             margin-top: 70px; /* Compensa o menu fixo */
             min-height: 80vh;
@@ -138,9 +138,12 @@
             align-items: center;
             text-align: center;
             padding: 60px 20px;
-            /* IMAGEM DO BANNER: Troque o link da imagem Unsplash abaixo pelo arquivo da sua foto de projeto (ex: url('banner-cozinha.jpg')) */
-            background: linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.8)), url('Gemini_Generated_Image_tfs9wmtfs9wmtfs9.png') center/cover no-repeat;
+            
+            /* Removido o gradiente escuro, mantendo apenas a imagem pura */
+            background: url('Gemini_Generated_Image_tfs9wmtfs9wmtfs9.png') center/cover no-repeat;
+            
             border-bottom: 1px solid var(--divider);
+            position: relative; /* Necessário para posicionar o texto na base */
         }
 
         .hero img.hero-logo {
@@ -161,6 +164,22 @@
             letter-spacing: 6px; 
             color: var(--text-main); 
             font-weight: 400;
+        }
+
+        /* Novo Estilo: Texto na base do banner */
+        .hero-mini-text {
+            position: absolute;
+            bottom: 50px; /* Distância do final da foto */
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 600px;
+            font-size: 1.05rem;
+            color: var(--text-main); /* Texto branco. Se a foto for clara na base, mude para var(--bg-color) */
+            font-weight: 300;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            text-align: center;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* Sombra sutil apenas no texto para garantir leitura */
         }
 
         /* --- SOBRE A EMPRESA --- */
@@ -301,6 +320,11 @@
             .brand-image { width: 100%; height: 350px; margin-top: 30px; }
             nav ul { display: none; }
             .hero h1 { font-size: 2.2rem; }
+            .hero-mini-text {
+                font-size: 0.95rem;
+                bottom: 30px;
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -327,7 +351,7 @@
     </header>
 
     <section class="hero">
-       
+        <p class="hero-mini-text">As marcas que você mais deseja para a melhor experiência em sua casa e área gourmet.</p>
     </section>
 
     <section id="sobre" class="about-section">
